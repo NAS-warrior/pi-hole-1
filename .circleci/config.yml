@@ -1,5 +1,4 @@
 version: 2
-
 jobs:
   plan-apply:
     working_directory: /tmp/project
@@ -16,3 +15,7 @@ jobs:
           root: .
           paths:
             - .
+workflows:
+  build_and_test:
+    jobs:
+      - plan-apply
